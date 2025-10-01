@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Files Converter - Convert Any File Format</title>
+    <title>Convex</title>
     <style>
         * {
             margin: 0;
@@ -261,11 +261,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>🔄 Files Converter</h1>
+        <h1>Files Converter</h1>
         <p class="subtitle">Convert your files to any format instantly</p>
 
         <div class="upload-area" id="uploadArea">
-            <div class="upload-icon">📁</div>
+            <div class="upload-icon"></div>
             <div class="upload-text">Click to upload or drag and drop</div>
             <div class="upload-hint">Supports images, documents, and more (Max 50MB)</div>
             <input type="file" id="fileInput" accept="*/*">
@@ -370,7 +370,7 @@
             const ext = file.name.split('.').pop().toLowerCase();
 
             // Display file info
-            fileName.textContent = `📄 ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+            fileName.textContent = `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
             fileInfo.classList.add('show');
 
             // Display available formats

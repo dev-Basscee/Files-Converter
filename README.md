@@ -1,30 +1,30 @@
-# Files Converter 🔄
+# Files Converter
 
-A powerful web-based file converter that supports multiple file formats. Upload any supported file and convert it to your desired format with a beautiful, user-friendly interface.
+A web-based file converter that supports multiple file formats. Upload a supported file and convert it to your desired format with a simple, responsive interface.
 
 ## Features
 
-- 🎨 **Beautiful UI** - Modern, responsive design with drag-and-drop support
-- 📁 **Multiple Format Support** - Convert between various file formats
-- 🔒 **Secure** - Files are processed and deleted immediately after conversion
-- ⚡ **Fast** - Quick conversion processing
-- 📱 **Responsive** - Works on desktop and mobile devices
+- Clean UI with drag-and-drop support
+- Multiple format support across images and documents
+- Secure processing with immediate cleanup after conversion
+- Fast conversion pipeline
+- Responsive design for desktop and mobile
 
 ## Supported Conversions
 
 ### Image Formats
-- **PNG** ↔ JPG, JPEG, PDF, BMP, GIF, TIFF, WebP, ICO
-- **JPG/JPEG** ↔ PNG, PDF, BMP, GIF, TIFF, WebP, ICO
-- **BMP** ↔ PNG, JPG, PDF, GIF, TIFF, WebP
-- **GIF** ↔ PNG, JPG, PDF, BMP, TIFF, WebP
-- **TIFF** ↔ PNG, JPG, PDF, BMP, GIF, WebP
-- **WebP** ↔ PNG, JPG, PDF, BMP, GIF, TIFF
-- **ICO** ↔ PNG, JPG, PDF, BMP
+- PNG ↔ JPG, JPEG, PDF, BMP, GIF, TIFF, WebP, ICO
+- JPG/JPEG ↔ PNG, PDF, BMP, GIF, TIFF, WebP, ICO
+- BMP ↔ PNG, JPG, PDF, GIF, TIFF, WebP
+- GIF ↔ PNG, JPG, PDF, BMP, TIFF, WebP
+- TIFF ↔ PNG, JPG, PDF, BMP, GIF, WebP
+- WebP ↔ PNG, JPG, PDF, BMP, GIF, TIFF
+- ICO ↔ PNG, JPG, PDF, BMP
 
 ### Document Formats
-- **PDF** → TXT, PNG, JPG
-- **TXT** → PDF, DOCX
-- **DOCX** → TXT, PDF
+- PDF → TXT, PNG, JPG
+- TXT → PDF, DOCX
+- DOCX → TXT, PDF
 
 ## Installation
 
@@ -51,7 +51,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### For PDF to Image conversion (optional but recommended):
+### For PDF to Image conversion (optional but recommended)
 On Ubuntu/Debian:
 ```bash
 sudo apt-get install poppler-utils
@@ -91,26 +91,26 @@ Files-Converter/
 ├── app.py                 # Flask backend application
 ├── requirements.txt       # Python dependencies
 ├── templates/
-│   └── index.html        # Frontend HTML/CSS/JS
-├── uploads/              # Temporary upload directory (auto-created)
-├── converted/            # Temporary conversion directory (auto-created)
-└── README.md            # This file
+│   └── index.html         # Frontend HTML/CSS/JS
+├── uploads/               # Temporary upload directory (auto-created)
+├── converted/             # Temporary conversion directory (auto-created)
+└── README.md              # This file
 ```
 
 ## API Endpoints
 
 ### GET `/`
-Returns the main application interface
+Returns the main application interface.
 
 ### GET `/api/supported-formats`
-Returns JSON object of all supported conversion formats
+Returns a JSON object of all supported conversion formats.
 
 ### POST `/api/convert`
-Converts uploaded file to specified format
-- **Parameters:**
+Converts an uploaded file to the specified format.
+- Parameters:
   - `file`: The file to convert (multipart/form-data)
   - `output_format`: Desired output format (string)
-- **Returns:** Converted file as download
+- Returns: Converted file as a download
 
 ## Configuration
 
@@ -122,13 +122,13 @@ You can modify the following settings in `app.py`:
 ## Security
 
 - Files are automatically deleted after conversion
-- Maximum file size limit prevents abuse
+- Maximum file size limit helps prevent abuse
 - Secure filename handling prevents directory traversal
 - Input validation on all file operations
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome. Please open an issue or submit a pull request.
 
 ## License
 
@@ -140,7 +140,7 @@ This project is open source and available under the MIT License.
 - Make sure poppler-utils is installed (see Installation section)
 
 ### Memory issues with large files
-- Adjust the `MAX_CONTENT_LENGTH` in app.py
+- Adjust the `MAX_CONTENT_LENGTH` in `app.py`
 - Consider implementing chunked processing for very large files
 
 ### File format not supported
